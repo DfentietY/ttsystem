@@ -25,13 +25,18 @@ UPDATE tbllecturer SET lect_username = lect_lastname||lect_initials||'@tut.ac.za
 
 /* Procedure */
 DECLARE
+    message1 VARCHAR2(1000);
+    message2 VARCHAR2(250);
     CURSOR username 
         IS SELECT lect_username, lect_lastname FROM tbllecturer;
 BEGIN
     FOR user_rec IN username
     LOOP
-        EXECUTE IMMEDIATE 'CREATE USER '||user_rec.lect_username||' IDENTIFIED BY '||user_rec.lect_lastname;
-        EXECUTE IMMEDIATE 'GRANT Lecturer TO '||user_rec.lect_username;
+        dbms_output.put_line(user_rec.lect_username);
     END LOOP;
 END;
 /
+
+
+        message1 := 'CREATE USER '||user_rec.lect_username||' IDENTIFIED BY '||user_rec.lect_lastname;
+        EXECUTE IMMEDIATE message1;
