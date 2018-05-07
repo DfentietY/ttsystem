@@ -23,3 +23,16 @@ GRANT SELECT ON T_super.tblvenue TO Student;
 /*2*/
 UPDATE tbllecturer SET lect_username = lect_lastname||lect_initials||'@tut.ac.za';
 
+/* Procedure */
+DECLARE
+    CURSOR username 
+        IS
+            SELECT * FROM tbllecturer;
+BEGIN
+    FOR userrec IN username
+    LOOP
+        CREATE USER user_rec.lect_username 
+            IDENTIFIED BY user_rec.lect_lastname||'123';
+    END LOOP;
+END;
+GRANT Lecturer TO lect_username;
