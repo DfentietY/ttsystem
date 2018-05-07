@@ -7,4 +7,19 @@ CREATE ROLE Lecturer;
 CREATE ROLE Student;
 GRANT DBA TO Admin;
 GRANT Admin To T_super;
+GRANT CONNECT TO Lecturer;
 GRANT SELECT ON T_super.tbllecturer TO Lecturer;
+GRANT UPDATE ON T_super.tbllecture TO Lecturer;
+GRANT SELECT ON T_super.tblsubject TO Lecturer;
+GRANT SELECT ON T_super.tblgrouptype TO Lecturer;
+GRANT SELECT ON T_super.tblgroup TO Lecturer;
+GRANT SELECT ON T_super.tblsession TO Lecturer;
+GRANT SELECT ON T_super.tblvenue TO Lecturer;
+/*Incomplete for the time being */
+GRANT SELECT ON T_super.tblsubject TO Student;
+GRANT SELECT ON T_super.tblsession TO Student;
+GRANT SELECT ON T_super.tblvenue TO Student;
+
+/*2*/
+UPDATE tbllecturer SET lect_username = lect_lastname||lect_initials||'@tut.ac.za';
+
