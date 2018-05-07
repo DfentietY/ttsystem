@@ -6,9 +6,9 @@
         
         private function __clone() {}
         
-        public static function getInstance() {
+        public static function getInstance($user, $pass) {
             if (!isset(self::$instance)) {
-                self::$instance = oci_connect('','','localhost/xe');
+                self::$instance = oci_connect($user, $pass, 'localhost/xe');
             }
             return self::$instance;
         }

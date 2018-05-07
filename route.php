@@ -6,8 +6,8 @@
                 $controller = new MainController();
                 require_once('model/main.php');
               break;
-            case 'dba' :
-                $controller = new DBAController();
+            case 'admin' :
+                $controller = new AdminController();
                 require_once('');
               break;
             case 'lecturer' :
@@ -28,7 +28,7 @@
     }
 
     $controllers = array('main' => array('login'),
-                        'dba' => array(),
+                        'admin' => array(),
                         'lecturer' => array(),
                         'student' => array());
 

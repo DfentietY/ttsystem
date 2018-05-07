@@ -6,7 +6,8 @@
         $controller = $_GET['controller'];
         $action = $_GET['action'];
     } else if(isset($_POST['controller'], $_POST['action'])){
-
+        $controller = $_POST['controller'];
+        $action = $_POST['action'];
     } else {
         $controller = 'main';
         $action = 'login';
