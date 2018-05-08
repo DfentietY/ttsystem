@@ -23,7 +23,7 @@
             break;
         }
         
-        session_start();
+        //session_start();
         $controller->{ $action }();
     }
 

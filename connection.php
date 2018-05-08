@@ -8,7 +8,12 @@
         
         public static function getInstance($user, $pass) {
             if (!isset(self::$instance)) {
-                self::$instance = oci_connect($user, $pass, 'localhost/xe');
+                if(strtolower($user) != "t_super"){
+                    $user = '"'.$user.'"';
+                    $pass = '"'.$pass.'"';
+                }
+                
+                self::$instance = oci_connect($user, $pass);
             }
             return self::$instance;
         }

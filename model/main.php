@@ -11,7 +11,18 @@
         }
 
         public static function login($username, $password) {
+            $conn = Db::getInstance($username, $password);
+            if(!$conn) {
+                //Error handling
+            } else {
+                $query = "SELECT granted_role FROM user_role_privs WHERE username = '".$username."'";
+                $objParse = oci_parse($conn, $query);
+                oci_execute($objParse);
+                while($r = oci_fetch_array($objParse))
+                    echo "Hello: ".$r[0];
+            }
 
         }
+
     }
 ?>

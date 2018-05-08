@@ -8,8 +8,9 @@
                 if(!$user) {
                     require_once('view/login.php'); //call for reload of login page
                 } else {
-                    if($user->role == "") {
-                        require_once('');
+                    if(strtolower($user->role) == "lecturer") {
+                        require_once('view/login.php');
+                        echo "User Logged In";
                     } else {
                         
                     }
