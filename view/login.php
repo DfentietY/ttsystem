@@ -13,7 +13,7 @@
                      
                 }
         </script>
-        <link rel="stylesheet" type="text/css" media="screen" href="view/main.css" />
+        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
         <title>Welcome</title>
     </head>
     <body>
