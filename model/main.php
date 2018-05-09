@@ -14,12 +14,15 @@
             $conn = Db::getInstance($username, $password);
             if(!$conn) {
                 //Error handling
+                return;
             } else {
                 $query = "SELECT granted_role FROM user_role_privs WHERE username = '".$username."'";
                 $objParse = oci_parse($conn, $query);
                 oci_execute($objParse);
-                while($r = oci_fetch_array($objParse))
-                    echo "Hello: ".$r[0];
+                while($row = oci_fetch_array($objParse))
+                    $role = $row[0];
+
+                return new Main($user, $role, $pass);
             }
 
         }

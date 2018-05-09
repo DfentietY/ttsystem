@@ -36,7 +36,7 @@ BEGIN
         EXECUTE IMMEDIATE 'CREATE USER "'
                     ||LOWER(rec.lect_username)
                     ||'" IDENTIFIED BY "'
-                    ||LOWER(rec.lect_lastname)||'" QUOTA 3M ON SYSTEM';
+                    ||LOWER(rec.lect_lastname)||'"';
         EXECUTE IMMEDIATE 'GRANT Lecturer TO "'||LOWER(rec.lect_username)||'"';
     END LOOP;
 END;

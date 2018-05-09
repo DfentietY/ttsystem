@@ -8,12 +8,15 @@
                 if(!$user) {
                     require_once('view/login.php'); //call for reload of login page
                 } else {
-                    if(strtolower($user->role) == "lecturer") {
-                        require_once('view/login.php');
-                        echo "User Logged In";
-                    } else {
-                        
+                    if (strtolower($user->role == "admin")) {
+                        //Send to admin page
+                    } else if(strtolower($user->role) == "lecturer") {
+                        //send to lecturer page
+                    } else if(strtolower($user->role) == "student"){
+                        //send to student page
                     }
+                    $_COOKIE["user"] = $user->user;
+                    $_COOKIE["role"] = $user->role;
                 } 
             }else {
                 require_once('view/login.php');

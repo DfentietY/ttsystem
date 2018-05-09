@@ -13,7 +13,7 @@
                     $pass = '"'.$pass.'"';
                 }
                 
-                self::$instance = oci_connect($user, $pass);
+                self::$instance = oci_connect($user, $pass, 'localhost/xe');
             }
             return self::$instance;
         }

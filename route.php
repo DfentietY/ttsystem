@@ -8,27 +8,26 @@
               break;
             case 'admin' :
                 $controller = new AdminController();
-                require_once('');
+                require_once('model/admin.php');
               break;
             case 'lecturer' :
                 $controller = new LecturerController();
-                require_once('');
+                require_once('model/lecturer.php');
               break;
             case 'student' :
                 $controller = new StudentController();
-                require_once('');
+                require_once('model/student.php');
               break;
             default:
-                //cdisplay error page
+                //display error page
             break;
         }
-        
         //session_start();
         $controller->{ $action }();
     }
 
     $controllers = array('main' => array('login'),
-                        'admin' => array(),
+                        'admin' => array('createUser'),
                         'lecturer' => array(),
                         'student' => array());
 
