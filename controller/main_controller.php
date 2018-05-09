@@ -8,15 +8,18 @@
                 if(!$user) {
                     require_once('view/login.php'); //call for reload of login page
                 } else {
-                    if (strtolower($user->role == "admin")) {
+                    if (strtolower($user->role) == "admin") {
                         //Send to admin page
+                        require_once('view/admin/createuser.php');
                     } else if(strtolower($user->role) == "lecturer") {
                         //send to lecturer page
                     } else if(strtolower($user->role) == "student"){
                         //send to student page
+                        echo "Student in the house";
                     }
-                    $_COOKIE["user"] = $user->user;
-                    $_COOKIE["role"] = $user->role;
+                    $_SESSION["user"] = $user->user;
+                    $_SESSION["role"] = $user->role;
+                    $_SESSION["pass"] = $user->pass;
                 } 
             }else {
                 require_once('view/login.php');

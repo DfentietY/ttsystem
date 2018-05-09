@@ -22,7 +22,7 @@
                 //display error page
             break;
         }
-        //session_start();
+        session_start();
         $controller->{ $action }();
     }
 

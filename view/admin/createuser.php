@@ -10,8 +10,8 @@
 <body>
     <form name="selForm" action="">
         <select name="role" onchange="create_user(this.value)">
-            <option value="lecturer">Lecturer</option>
-            <option value="student">Student</option>
+            <option value="lecturer" >Lecturer</option>
+            <option value="student" >Student</option>
         </select>
     </form>
     <form method="POST">

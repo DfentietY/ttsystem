@@ -1,7 +1,7 @@
 function create_user(role) {
     var container =  document.getElementById("csContainer");
     if(role == ""){
-        container.innerHTML = "";
+        container.innerHTML = "The way is paved in glitter";
     }else {
         if(window.XMLHttpRequest){
             xmlhttp = new XMLHttpRequest();
@@ -14,7 +14,7 @@ function create_user(role) {
                 container.innerHTML = this.responseText;
             }
         };
-        xmlhttp.open("POST", "view/admin/getCreateUserUI.php?role=" + role, true);
+        xmlhttp.open("GET", "view/admin/getCreateUserUI.php?role=" + role, true);
         xmlhttp.send(null);
     }
 }
