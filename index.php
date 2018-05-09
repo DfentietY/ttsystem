@@ -1,4 +1,6 @@
 <?php
+    session_save_path("D:/");
+    session_start();
     //make connection to database visible to the rest of the project
     include_once('connection.php');
     //check if controller and action have been determined
