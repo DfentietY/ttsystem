@@ -22,7 +22,33 @@
         }
 
         public static function removeUser($username){
-            
+            $username = strtolower($username);
+            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
+            $statement = 'DROP USER "'.$username.'"';
+            $objParse = oci_parse($conn, $statement);
+            oci_execute($objParse);
+        }
+
+        public static function resetPassword($username, $password){
+            $username = strtolower($username);
+            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
+            $statement = 'ALTER USER "'.$username.'" IDENTIFIED BY "'.$password.'"';
+            $objParse = oci_parse($conn, $statement);
+            oci_execute($objParse);
+        }
+
+        public static function viewLecturer(){
+            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
+            $statement = "SELECT lect_usernames, lect_lastname||' '||lect_intials 
+                            FROM tbllecture";
+            $objParse = oci_parse($conn, $statement);
+            oci_execute($objParse);
+
+            $list = array();
+            while($rows = oci_fetch_array($objParse)){
+                $list[] = $rows[0];
+            }
+            return $list1;
         }
     }
 ?>
