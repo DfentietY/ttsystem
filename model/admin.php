@@ -1,7 +1,11 @@
 <?php 
     class Admin {
-        function __construct(){
-            
+        public $username;
+        public $lastname;
+    
+        function __construct($username, $lastname){
+            $this->username = $username;
+            $this->lastname = $lastname;
         }
 
         public static function createLecturer($lastname,$initials){
@@ -46,9 +50,9 @@
 
             $list = array();
             while($rows = oci_fetch_array($objParse)){
-                $list[] = $rows[0];
+                $list[] = new Admin($rows[0], $rows[1]);
             }
-            return $list1;
+            return $list;
         }
     }
 ?>
