@@ -19,8 +19,8 @@
         public static function getLectSubj() {
             $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
             $statement = "SELECT s.sub_subjcode, sub_subjname, sub_level, gt_type, gt_numgroups, gt_groupsize
-                          FROM tblsubject s, tblgrouptype gt, tblgroup g, tbllecturer l
-                          WHERE s.sub_subjcode = gt.subjcode
+                          FROM T_super.tblsubject s, T_super.tblgrouptype gt, T_super.tblgroup g, T_super.tbllecturer l
+                          WHERE s.sub_subjcode = gt.sub_subjcode
                           AND gt.gt_id = g.gt_id
                           AND g.lect_lectid = l.lect_lectid
                           AND LOWER(l.lect_username) = '".$_SESSION["user"]."'";
