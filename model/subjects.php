@@ -26,6 +26,12 @@
                           AND LOWER(l.lect_username) = '".$_SESSION["user"]."'";
             $objParse = oci_parse($conn, $statement);
             oci_execute($objParse);
+
+            while($rows = oci_fetch_array($objParse)){
+                $list[] = new Subjects($rows[0], $rows[1], $rows[2], $rows[3], $rows[4], $rows[5]);
+            }
+
+            return $list;
         }
     }
 ?>
