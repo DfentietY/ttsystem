@@ -27,7 +27,7 @@
         }
 
         public static function maintainLect($lastname, $initials, $password, $email, $birthday){
-
+            
         }
 
         function changePassword($password){
@@ -36,10 +36,6 @@
             $objParse = oci_parse($conn, $statement);
             oci_execute();
 
-        }
-
-        public static function getSubjects() {
-            return;
         }
 
     }
