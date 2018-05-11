@@ -27,7 +27,7 @@
 
     $controllers = array('main' => array('login'),
                         'admin' => array('createUser', 'removeUser', 'resetPassword', 'viewLecturer'),
-                        'lecturer' => array(),
+                        'lecturer' => array('maintainProf', 'viewSubjects'),
                         'student' => array());
 
     if(array_key_exists($controller, $controllers)) {
