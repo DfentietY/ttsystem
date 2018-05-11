@@ -1,11 +1,11 @@
 <?php 
     class Admin {
         public $username;
-        public $lastname;
+        public $name;
     
-        function __construct($username, $lastname){
+        function __construct($username, $name){
             $this->username = $username;
-            $this->lastname = $lastname;
+            $this->name = $name;
         }
 
         public static function createLecturer($lastname,$initials){
@@ -54,5 +54,7 @@
             }
             return $list;
         }
+
+
     }
 ?>
