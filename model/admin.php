@@ -44,7 +44,7 @@
         public static function viewLecturer(){
             $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
             $statement = "SELECT lect_username, lect_lastname||' '||lect_initials 
-                            FROM tbllecture";
+                            FROM tbllecturer";
             $objParse = oci_parse($conn, $statement);
             oci_execute($objParse);
 
