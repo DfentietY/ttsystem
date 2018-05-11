@@ -1,6 +1,7 @@
 <?php
     class Db {
         private static $instance = NULL;
+        private static $adminInstance = NULL;
         
         private function __construct() {}
         
@@ -16,6 +17,14 @@
                 self::$instance = oci_connect($user, $pass);
             }
             return self::$instance;
+        }
+
+        public static function getAdminInstance() {
+            if(!isset(self::$adminInstance)){
+                self::$adminInstance = oci_connect('T_super', 'T_super');
+            }
+
+            return self::$adminInstance;
         }
     }
 ?>

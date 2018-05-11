@@ -27,19 +27,15 @@
         }
 
         public static function maintainLect($lastname, $initials, $password, $email, $birthday){
-
+            
         }
 
         function changePassword($password){
-            $conn = Db::getInstance('T_super', 'T_super');
+            $conn = Db::getAdminInstance();
             $statement = 'ALTER USER "'.$username.'" IDENTIFIED BY "'.$password.'"';
             $objParse = oci_parse($conn, $statement);
-            oci_execute();
+            oci_execute($objParse);
 
-        }
-
-        public static function getSubjects() {
-            return;
         }
 
     }
