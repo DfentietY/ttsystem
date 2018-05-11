@@ -33,5 +33,16 @@
 
             return $list;
         }
+
+        public static function getSubjects() {
+            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
+            $statement = "";
+            $objParse = oci_parse($conn, $statement);
+            oci_execute($objParse);
+
+
+            return;
+
+        }
     }
 ?>
