@@ -11,7 +11,7 @@
         <p>Enter username: <input type="text" name="username" /></p>
         <p><input type="submit" name="btnRemove" value="Remove" /></p>
         <input type="hidden" name="controller" value="admin" />
-        <input type="hidden" name="action" value="removeuser" />
+        <input type="hidden" name="action" value="removeUser" />
     </form>
     <?php require_once('route.php'); ?>
 </body>

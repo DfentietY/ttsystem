@@ -43,12 +43,11 @@
 
         public static function viewLecturer(){
             $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
-            $statement = "SELECT lect_username, lect_lastname||' '||lect_initials 
+            $statement = "SELECT lect_username, lect_lastname||' '||lect_initials AS name
                             FROM tbllecturer";
             $objParse = oci_parse($conn, $statement);
             oci_execute($objParse);
 
-            $list = array();
             while($rows = oci_fetch_array($objParse)){
                 $list[] = new Admin($rows[0], $rows[1]);
             }
