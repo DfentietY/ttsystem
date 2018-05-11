@@ -43,7 +43,7 @@
 
         public static function viewLecturer(){
             $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
-            $statement = "SELECT lect_usernames, lect_lastname||' '||lect_intials 
+            $statement = "SELECT lect_username, lect_lastname||' '||lect_initials 
                             FROM tbllecture";
             $objParse = oci_parse($conn, $statement);
             oci_execute($objParse);
@@ -55,6 +55,21 @@
             return $list;
         }
 
+        public static function delSubjGroup($subjGroup) {
+
+        }
+
+        public static function addSubjGroup($subjGroup) {
+
+        }
+
+        public static function addSubject($subject) {
+
+        }
+
+        public static function addSubjectAndGroupType($subject, $grouptype){
+
+        }
 
     }
 ?>
