@@ -34,7 +34,7 @@
             $conn = Db::getAdminInstance();
             $statement = 'ALTER USER "'.$username.'" IDENTIFIED BY "'.$password.'"';
             $objParse = oci_parse($conn, $statement);
-            oci_execute();
+            oci_execute($objParse);
 
         }
 
