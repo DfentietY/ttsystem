@@ -6,7 +6,7 @@
                 $initials = filter_input(INPUT_POST, 'initials') ? filter_input(INPUT_POST, 'initials') : '%';
                 if($lastname != '%'){
                     Admin::createLecturer($lastname, $initials);
-                    require_once('createuser.php');
+                    require_once('view/admin/adminMain.php');
                     echo "user created";
                 }
             }
@@ -15,7 +15,7 @@
                 $studNum = filter_input(INPUT_POST, 'username') ? filter_input(INPUT_POST, 'username') : 0;
                 if($studNum != 0){
                     Admin::createStudent($studNum);
-                    require_once('view/admin/createuser.php');
+                    require_once('view/admin/adminMain.php');
                     echo "user created";
                 }
             }
@@ -25,7 +25,7 @@
                 $username = filter_input(INPUT_POST,'username') ? filter_input(INPUT_POST,'username') : '%';
                 if($username != '%'){
                     Admin::removeUser($username);
-                    require_once('view/admin/removeUser.php');
+                    require_once('view/admin/adminMain.php');
                     echo "user removed";
                 }
             }
@@ -41,13 +41,8 @@
                 }
             }
         }
-        public function viewLecturer(){
-           // if(isset($_POST['btnViewLect'])){
-                $list = Admin::viewLecturer();
-                require_once('view/admin/viewLecturer.php');
-
-          //  }
-
+        public static function viewLecturer(){
+            $list = Admin::viewLecturer();
         }
     }
 ?>
