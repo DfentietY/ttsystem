@@ -26,7 +26,7 @@
     }
 
     $controllers = array('main' => array('login'),
-                        'admin' => array('createUser'),
+                        'admin' => array('createUser', 'removeUser', 'resetPassword', 'viewLecturer'),
                         'lecturer' => array(),
                         'student' => array());
 
