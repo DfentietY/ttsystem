@@ -28,7 +28,7 @@
     $controllers = array('main' => array('login'),
                         'admin' => array('createUser', 'removeUser', 'resetPassword', 'viewLecturer'),
                         'lecturer' => array('maintainProf', 'viewSubjects'),
-                        'student' => array());
+                        'student' => array('maintainProf', 'getTimeTable'));
 
     if(array_key_exists($controller, $controllers)) {
         if(in_array($action, $controllers[$controller])){
