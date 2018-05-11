@@ -11,7 +11,7 @@
                     if (strtolower($user->role) == "admin") {
                         //Send to admin page
                        // echo "<script> document.location.href='?controller=admin&action=viewLecturer'; </script>";
-                       require_once("view/admin/resetPassword.php");
+                       require_once("view/admin/adminMain.php");
                     } else if(strtolower($user->role) == "lecturer") {
                         //send to lecturer page
                     } else if(strtolower($user->role) == "student"){

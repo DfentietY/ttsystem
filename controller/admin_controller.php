@@ -36,7 +36,7 @@
                 $password = filter_input(INPUT_POST,'password')?filter_input(INPUT_POST,'password'):'%';
                 if($username != '%' || $password !='%'){
                     Admin::resetPassword($username,$password);
-                    require_once('view/admin/resetPassword.php');
+                    require_once('view/admin/adminMain.php');
                     echo "password reseted";
                 }
             }
