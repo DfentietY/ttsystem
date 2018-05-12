@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="font/stylesheet.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/admin.js"></script>
@@ -12,10 +13,10 @@
 </head>
 <body>
   
-<button style="font-family: varela_roundregular;font-size: 20px;" type="button" class="btn btn-def btn-block" data-toggle="modal" data-target="#ResetModal">Reset Password</button>
-<button style="font-family: varela_roundregular;font-size: 20px;" type="button" class="btn btn-def btn-block" data-toggle="modal" data-target="#CreateModal">Create User</button>
-<button style="font-family: varela_roundregular;font-size: 20px;" type="button" class="btn btn-def btn-block" data-toggle="modal" data-target="#RemoveModal">Remove Users</button>
-<button style="font-family: varela_roundregular;font-size: 20px;" type="button" id="btnViewModal" class="btn btn-def btn-block" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
+<button type="button" class="btn btn-def btn-block" data-toggle="modal" data-target="#ResetModal">Reset Password</button>
+<button type="button" class="btn btn-def btn-block" data-toggle="modal" data-target="#CreateModal">Create User</button>
+<button type="button" class="btn btn-def btn-block" data-toggle="modal" data-target="#RemoveModal">Remove Users</button>
+<button type="button" id="btnViewModal" class="btn btn-def btn-block" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
 
     <!--reset password Modal -->
     <div id="ResetModal" class="modal fade" role="dialog">
@@ -23,13 +24,13 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 style="font-family: 'varela_roundregular';font-size: 20px;" class="modal-title">Reset Password</h4>
+                    <h4 class="modal-title">Reset Password</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form action="" method="POST">
-                            <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter username: <input type="text" name="username" /></p>
-                            <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter Password: <input type="password" name="password" /></p>
+                            <p>Enter username: <input type="text" name="username" /></p>
+                            <p>Enter Password: <input type="password" name="password" /></p>
                             <p><input type="submit" name="btnReset" value="Reset" /></p>
                             <p><input type="hidden" name="controller" value="admin"></p>
                             <p><input type="hidden" name="action" value="resetPassword"></p>

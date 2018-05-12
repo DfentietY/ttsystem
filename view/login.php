@@ -18,7 +18,7 @@
                 }
         </script>
         <style>
-            label {
+            body {
                 font-family: "varela_roundregular";
                 font-size: 20px;
             }
