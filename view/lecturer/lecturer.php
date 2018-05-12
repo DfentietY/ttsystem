@@ -12,24 +12,19 @@
     <title>Welcome</title>
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-            <header class="container-fluid">
-            </header>
-        </div>
-        <div class="row">
-            <div class="col-md-3">
-                <ul>
-                    <li><a href=# >Profile</a></li>
-                    <li><a href=# >Subjects</a></li>
-                </ul>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="img/tut-logo-blue.jpg" />
             </div>
-            <div class="col-md-9">
-
-            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a id="profile" href="#">Profile</a></li>
+                <li><a id="subjects" href="#">View Subjects</a></li>
+            </ul>
         </div>
-        <footer class="container-fluid">
-        </footer>
+    </nav>
+    <div class="container" id="cont">
+        
     </div>
 </body>
 </html>
