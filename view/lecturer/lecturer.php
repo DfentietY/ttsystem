@@ -9,9 +9,6 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/lecturer.js"></script>
-    <style>
-        body { background-image: url('img/tut-bckground.jpg'); }
-    </style>
     <title>Welcome</title>
 </head>
 <body>

@@ -56,11 +56,11 @@
                 </div>
                 <div class="modal-body">
                 <form name="selForm" action="">
-        <Select class="form-control" name="role" onchange="create_user(this.value)">
-            <option value="" selected disabled hidden>Select Option</option>
-            <option value="lecturer" >Lecturer</option>
-            <option value="student" >Student</option>
-        </select>
+            <select class="form-control" name="role" onchange="create_user(this.value)">
+                <option value="" selected disabled hidden>Select Option</option>
+                <option value="lecturer" >Lecturer</option>
+                <option value="student" >Student</option>
+            </select>
         </br>
     </form>
     <form method="POST">
