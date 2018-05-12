@@ -28,9 +28,9 @@
                 </div>
                 <div class="modal-body">
                     <form action="" method="POST">
-                            <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter username: <input type="text" name="username" /></p>
-                            <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter Password: <input type="password" name="password" /></p>
-                            <p><input type="submit" name="btnReset" value="Reset" /></p>
+                            <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter username: <input class="form-control" type="text" name="username" /></p>
+                            <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter Password: <input class="form-control" type="password" name="password" /></p>
+                            <p><input class="btn btn-def btn-block" type="submit" name="btnReset" value="Reset" /></p>
                             <p><input type="hidden" name="controller" value="admin"></p>
                             <p><input type="hidden" name="action" value="resetPassword"></p>
                         </form>
@@ -85,8 +85,8 @@
                 </div>
                 <div class="modal-body">
                     <form action="" method="POST">
-                        <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter username: <input type="text" name="username" /></p>
-                        <p><input type="submit" name="btnRemove" value="Remove" /></p>
+                        <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter username: <input class="form-control" type="text" name="username" /></p>
+                        <p><input class="btn btn-def btn-block" type="submit" name="btnRemove" value="Remove" /></p>
                         <input type="hidden" name="controller" value="admin" />
                         <input type="hidden" name="action" value="removeUser" />
                     </form>
