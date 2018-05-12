@@ -22,6 +22,8 @@
                 //display error page
             break;
         }
+        
+        require_once('model/subjects.php');
         $controller->{ $action }();
     }
 

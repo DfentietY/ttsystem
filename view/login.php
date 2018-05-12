@@ -17,6 +17,12 @@
                      }
                 }
         </script>
+        <style>
+            label {
+                font-family: 'varela_roundregular';
+                font-size: 20px;
+            }
+        </style>
         <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
         <title>Welcome</title>
     </head>
@@ -26,9 +32,9 @@
         <form method="POST">
                  <!--Inputs for username and pasword -->
             <div class="container">
-                    <label style="font-family: 'varela_roundregular';font-size: 20px;" for="uname"><b>Username</b></label>
+                    <label for="uname"><b>Username</b></label>
                     <input type="text" class="form-control" placeholder="Enter Username" name="username" required />
-                    <label style="font-family: 'varela_roundregular';font-size: 20px;" for="pwd"><b>Password</b></label>
+                    <label for="pwd"><b>Password</b></label>
                     <input type="password" class="form-control" placeholder="Enter Password" name="password" required/>
                     </br>
                     <input type="submit" class="btn btn-def btn-block" name="btnLogin" value="Login">

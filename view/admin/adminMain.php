@@ -108,16 +108,8 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <table border=1>
-                        <thead>
-                            <th>Leccturer Name</th>
-                            <th>Lecturer Username</th>
-                        </thead>
-                        <tbody>
-                            <div id="lectNames">
-                            </div>
-                        </tbody>
-                    </table>
+                    <div id="lectNames">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -125,6 +117,11 @@
             </div>
         </div>
     </div>
+    <script>        
+        $("#btnViewModal").on("click", function (){
+            $("#lectNames").load("?controller=admin&action=viewLecturer");
+        });
+    </script>
     <?php 
         require_once('route.php');
     ?>

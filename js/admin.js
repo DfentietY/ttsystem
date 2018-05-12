@@ -18,6 +18,3 @@ function create_user(role) {
         xmlhttp.send(null);
     }
 }
-$('#btnViewModal').on('tap', function (){
-    $('#lectNames').load("view/admin/getLecturerUsernames.php");
-})

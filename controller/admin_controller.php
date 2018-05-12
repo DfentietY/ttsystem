@@ -43,6 +43,7 @@
         }
         public static function viewLecturer(){
             $list = Admin::viewLecturer();
+            require_once('view/admin/getLecturerUsernames.php');
         }
     }
 ?>
