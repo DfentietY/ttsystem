@@ -26,6 +26,7 @@
         <title>Welcome</title>
     </head>
     <body>
+    <div class="clo-lg-4 col-lg-offset-4">
     <div class="container centered text-center">
         <form method="POST">
                  <!--Inputs for username and pasword -->
@@ -35,7 +36,7 @@
                     <label for="pwd"><b>Password</b></label>
                     <input type="password" class="form-control" placeholder="Enter Password" name="password" required/>
                     </br>
-                    <input type="submit" class="btn btn-success" name="btnLogin" value="Login">
+                    <input type="submit" class="btn btn-def btn-block" name="btnLogin" value="Login">
                     <input type="hidden" name="controller" value="main" />
                     <input type="hidden" name="action" value="login" />
             </div>
@@ -44,6 +45,7 @@
                 require_once('route.php');
             ?>
         </form>  
+        </div>
         </div>
     </body>
 </html>
