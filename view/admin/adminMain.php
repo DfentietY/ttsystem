@@ -27,11 +27,13 @@
                     <h4 class="modal-title">Reset Password</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
-                <div class="modal-body">
+                <div style="text-align: center;" class="modal-body">
                     <form action="" method="POST">
-                            <p>Enter username: <input type="text" name="username" /></p>
-                            <p>Enter Password: <input type="password" name="password" /></p>
-                            <p><input type="submit" name="btnReset" value="Reset" /></p>
+                            <input placeholder="Enter Username" class="form-control" type="text" name="username" />
+                            </br>
+                            <input placeholder="Enter Password" class="form-control" type="password" name="password" />
+                            </br>
+                            <p><input class="btn btn-def btn-block" type="submit" name="btnReset" value="Reset" /></p>
                             <p><input type="hidden" name="controller" value="admin"></p>
                             <p><input type="hidden" name="action" value="resetPassword"></p>
                         </form>
@@ -49,7 +51,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 style="font-family: 'varela_roundregular';font-size: 20px;" class="modal-title">Create User</h4>
+                    <h4  class="modal-title">Create User</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -81,12 +83,13 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 style="font-family: 'varela_roundregular';font-size: 20px;" class="modal-title">Remove User</h4>
+                    <h4  class="modal-title">Remove User</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <form action="" method="POST">
-                        <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter username: <input class="form-control" type="text" name="username" /></p>
+                    <form style="text-align: center;" action="" method="POST">
+                        <input placeholder="Enter Username" class="form-control" type="text" name="username" />
+                        </br>
                         <p><input class="btn btn-def btn-block" type="submit" name="btnRemove" value="Remove" /></p>
                         <input type="hidden" name="controller" value="admin" />
                         <input type="hidden" name="action" value="removeUser" />
@@ -105,7 +108,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 style="font-family: 'varela_roundregular';font-size: 20px;" class="modal-title">View Lectures</h4>
+                    <h4  class="modal-title">View Lectures</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
