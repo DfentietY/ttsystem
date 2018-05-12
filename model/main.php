@@ -19,10 +19,9 @@
                 if(strtolower($username) == "t_super"){
                     $username = "T_SUPER";
                 }
-                $query = "SELECT granted_role FROM user_role_privs WHERE username = '".$username."'";
+                $query = "SELECT granted_role FROM user_role_privs";
                 $objParse = oci_parse($conn, $query);
                 oci_execute($objParse);
-                $role = array();
                 while($row = oci_fetch_array($objParse))
                     $role[] = $row[0];
 
