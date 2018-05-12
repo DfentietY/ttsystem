@@ -19,7 +19,10 @@
         </div>
         <div class="row">
             <div class="col-md-3">
-                
+                <ul>
+                    <li><a href=# >Profile</a></li>
+                    <li><a href=# >Subjects</a></li>
+                </ul>
             </div>
             <div class="col-md-9">
 

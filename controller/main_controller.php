@@ -18,6 +18,8 @@
                     } else if(strtolower($user->role) == "student"){
                         //send to student page
                         echo "Student in the house";
+                    }else {
+                        echo "Who is this?";
                     }
                     $_SESSION["user"] = $user->user;
                     $_SESSION["role"] = $user->role;
