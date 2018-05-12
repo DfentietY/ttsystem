@@ -19,11 +19,10 @@
         </script>
         <style>
             label {
-                font-family: 'varela_roundregular';
+                font-family: "varela_roundregular";
                 font-size: 20px;
             }
         </style>
-        <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
         <title>Welcome</title>
     </head>
     <body>
@@ -44,7 +43,6 @@
             <?php 
                 require_once('route.php');
             ?>
-       
         </form>  
         </div>
     </body>
