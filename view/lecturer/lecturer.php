@@ -13,8 +13,20 @@
 </head>
 <body>
     <div class="container">
-        <header>
-        </header>
+        <div class="row">
+            <header class="container-fluid">
+            </header>
+        </div>
+        <div class="row">
+            <div class="col-md-3">
+                
+            </div>
+            <div class="col-md-9">
+
+            </div>
+        </div>
+        <footer class="container-fluid">
+        </footer>
     </div>
 </body>
 </html>
