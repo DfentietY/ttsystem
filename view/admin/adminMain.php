@@ -107,24 +107,14 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                                <table border=1>
+                    <table border=1>
                         <thead>
-                            <th>Lacture Name</th>
-                            <th>Lecture Username</th>
+                            <th>Leccturer Name</th>
+                            <th>Lecturer Username</th>
                         </thead>
                         <tbody>
-                            <?php
-                                require_once('model/admin.php');
-                                $list = Admin::viewLecturer();
-                                if(isset($list)){
-                                    foreach($list as $lecturer){
-                                        echo "<tr>
-                                            <td>$lecturer->name</td>
-                                            <td>$lecturer->username</td>
-                                        </tr>";
-                                    }
-                                }
-                            ?>
+                            <div id="lectNames">
+                            </div>
                         </tbody>
                     </table>
                 </div>
