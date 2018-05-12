@@ -29,15 +29,9 @@
                 </div>
                 <div class="modal-body">
                     <form action="" method="POST">
-<<<<<<< HEAD
                             <p>Enter username: <input type="text" name="username" /></p>
                             <p>Enter Password: <input type="password" name="password" /></p>
                             <p><input type="submit" name="btnReset" value="Reset" /></p>
-=======
-                            <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter username: <input class="form-control" type="text" name="username" /></p>
-                            <p style="font-family: 'varela_roundregular';font-size: 20px;">Enter Password: <input class="form-control" type="password" name="password" /></p>
-                            <p><input class="btn btn-def btn-block" type="submit" name="btnReset" value="Reset" /></p>
->>>>>>> 904a1d3b03634ec724ccc4bbc2ef84e3abdad08e
                             <p><input type="hidden" name="controller" value="admin"></p>
                             <p><input type="hidden" name="action" value="resetPassword"></p>
                         </form>
