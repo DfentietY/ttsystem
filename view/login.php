@@ -26,26 +26,28 @@
         <title>Welcome</title>
     </head>
     <body>
-    <div class="clo-lg-4 col-lg-offset-4">
-    <div class="container centered text-center">
-        <form method="POST">
-                 <!--Inputs for username and pasword -->
-            <div class="container">
-                    <label for="uname"><b>Username</b></label>
-                    <input type="text" class="form-control" placeholder="Enter Username" name="username" required />
-                    <label for="pwd"><b>Password</b></label>
-                    <input type="password" class="form-control" placeholder="Enter Password" name="password" required/>
-                    </br>
-                    <input type="submit" class="btn btn-def btn-block" name="btnLogin" value="Login">
-                    <input type="hidden" name="controller" value="main" />
-                    <input type="hidden" name="action" value="login" />
+    <div class="row justify-content-center align-middle">
+    <div class="col-lg-4 col-lg-offset-4">
+        <div class="container centered text-center">
+            <form method="POST">
+                    <!--Inputs for username and pasword -->
+                <div class="container">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" class="form-control" placeholder="Enter Username" name="username" required />
+                        <label for="pwd"><b>Password</b></label>
+                        <input type="password" class="form-control" placeholder="Enter Password" name="password" required/>
+                        </br>
+                        <input type="submit" class="btn btn-def btn-block" name="btnLogin" value="Login">
+                        <input type="hidden" name="controller" value="main" />
+                        <input type="hidden" name="action" value="login" />
+                </div>
+                </br>
+                <?php 
+                    require_once('route.php');
+                ?>
+            </form>  
             </div>
-            </br>
-            <?php 
-                require_once('route.php');
-            ?>
-        </form>  
-        </div>
+         </div>
         </div>
     </body>
 </html>
