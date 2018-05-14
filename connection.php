@@ -14,7 +14,7 @@
                     $user = '"'.$user.'"';
                     $pass = '"'.$pass.'"';
                 }
-                self::$instance = oci_connect($user, $pass, "localhost/XE");
+                self::$instance = oci_connect($user, $pass);
             }
             if(!self::$instance){
                 $e = oci_error();
@@ -35,7 +35,7 @@
         public static function getAdminInstance() {
             ini_set('display_errors', 'OFF');
             if(!isset(self::$adminInstance)){
-                self::$adminInstance = oci_connect('T_super', 'T_super', "localhost/XE");
+                self::$adminInstance = oci_connect('T_super', 'T_super');
             }
             return self::$adminInstance;
         }
