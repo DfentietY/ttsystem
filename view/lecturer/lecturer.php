@@ -14,7 +14,6 @@
             margin-right: 1rem; 
         }
         img{
-            filter: invert(100%);
             width: 150px;
             height: 75px;
         }
