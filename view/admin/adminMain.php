@@ -10,13 +10,46 @@
     <script src="js/admin.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>   
+    <style>
+        #nav-menu {
+            margin-right: 1rem; 
+        }
+        img{
+            filter: invert(100%);
+            width: 150px;
+            height: 75px;
+        }
+    </style>
 </head>
 <body>
-  
-<button type="button" class="btn btn-def btn-block" data-toggle="modal" data-target="#ResetModal">Reset Password</button>
-<button type="button" class="btn btn-def btn-block" data-toggle="modal" data-target="#CreateModal">Create User</button>
-<button type="button" class="btn btn-def btn-block" data-toggle="modal" data-target="#RemoveModal">Remove Users</button>
-<button type="button" id="btnViewModal" class="btn btn-def btn-block" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <a class="pull-left" href="#"><img src="img/tut-logo-blue.jpg"/></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#ResetModal">Reset Password 
+                        <span class="sr-only">(current)</span>
+                    </button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#CreateModal">Create User</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#RemoveModal">Remove Users</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="btnViewModal" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log Out</button>
+            </form>
+        </div>
+    </nav>
+
 
     <!--reset password Modal -->
     <div id="ResetModal" class="modal fade" role="dialog">

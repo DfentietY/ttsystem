@@ -15,11 +15,19 @@
                 font-family: "varela_roundregular";
                 font-size: 20px;
             }
+            #nav-menu {
+            margin-right: 1rem; 
+            }
+            img{
+                filter: invert(100%);
+                width: 150px;
+                height: 75px;
+            }
             .center-form{
                 background-image: url('img/paper.jpg');
                 padding: 2em 2em;
                 margin: auto;
-                margin-top: 18em;
+                margin-top: 18rem;
                 display: none;
             }
 
