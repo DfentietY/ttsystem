@@ -25,26 +25,25 @@
 </head>
 <body>
     <div class="container">
-        <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark">
-            <div class="navbar-header">
-                <img src="img/tut-logo-blue.jpg" class="navbar-brand" />
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div id="nav-menu" class="collapse navbar-collapse navbar-right">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <img src="img/tut-logo-blue.jpg" class="navbar-brand" />
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+           
                 <ul class="nav navbar-nav">
                     <li><a id="profile" href="#">Profile</a></li>
                     <li><a id="subjects" href="#">View Subjects</a></li>
                 </ul>
+        
             </div>
         </nav>
-        <div class="container" id="cont">
-            
-        </div>
     </div>
 </body>
 </html>
