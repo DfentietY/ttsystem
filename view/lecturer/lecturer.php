@@ -10,6 +10,12 @@
     <script src="js/lecturer.js"></script>
     <title>Welcome</title>
     <style>
+        body {
+            padding-top: 3.6em;
+        }
+        #nav-menu {
+            margin-right: 1rem; 
+        }
         img{
             filter: invert(100%);
             width: 150px;
@@ -18,19 +24,27 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container-fluid">
+    <div class="container">
+        <nav class="navbar navbar-inverse navbar-fixed-top navbar-dark">
             <div class="navbar-header">
-                <img src="img/tut-logo-blue.jpg" />
+                <img src="img/tut-logo-blue.jpg" class="navbar-brand" />
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-menu" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
             </div>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a id="profile" href="#">Profile</a></li>
-                <li><a id="subjects" href="#">View Subjects</a></li>
-            </ul>
+            <div id="nav-menu" class="collapse navbar-collapse navbar-right">
+                <ul class="nav navbar-nav">
+                    <li><a id="profile" href="#">Profile</a></li>
+                    <li><a id="subjects" href="#">View Subjects</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container" id="cont">
+            
         </div>
-    </nav>
-    <div class="container" id="cont">
-        
     </div>
 </body>
 </html>
