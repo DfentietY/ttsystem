@@ -1,7 +1,7 @@
 <?php 
     class LecturerController {
         public function maintainProf() {
-            getLectInfo($_SESSION["user"]);
+            LecturerController::getLectInfo($_SESSION["user"]);
             if(isset($_POST['btnProf'])){
                 $username = $_SESSION["user"];
                 $password = filter_input(INPUT_POST, 'password') ? filter_input(INPUT_POST, 'password') : $_SESSION["pass"];
@@ -22,7 +22,7 @@
             }
         }
 
-        function getLectInfo($username) {
+        public static function getLectInfo($username) {
             $list = Lecturer::getLectInfo($username);
             if(isset($list)){
                 echo '
@@ -34,6 +34,7 @@
                         <p><input type="email" name="email" id="email" value="'.$list[0]->email.'" /></p>
                         <p><input type="date" name="birthday" id="birthday" value="'.$list[0]->birthday.'" /></p>
                     </form>';
+            }else {
             }
         }
     }

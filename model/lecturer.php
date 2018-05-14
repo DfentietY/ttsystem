@@ -18,7 +18,7 @@
             $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
             $statement = "SELECT lect_initials, lect_lastname, lect_username, lect_email, lect_birthday 
                           FROM T_super.tbllecturer
-                          WHERE lect_username = :username";
+                          WHERE LOWER(lect_username) = :username";
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $username);
             oci_execute($objParse);
