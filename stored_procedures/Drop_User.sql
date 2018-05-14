@@ -3,3 +3,4 @@ IS
 BEGIN
     EXECUTE IMMEDIATE 'DROP USER "'||p_username||'"';
 END;
+/

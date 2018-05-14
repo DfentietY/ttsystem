@@ -37,7 +37,18 @@
             if(!isset(self::$adminInstance)){
                 self::$adminInstance = oci_connect('T_super', 'T_super');
             }
-            return self::$adminInstance;
+            if(!self::$adminInstance){
+                $e = oci_error();
+                echo '<div class="alert alert-danger" role="alert">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h3>Connection Error</h3>
+                        <p>'.$e["message"].'</p>
+                     </div>';
+            }else {
+                return self::$adminInstance;
+            }
         }
     }
 ?>
