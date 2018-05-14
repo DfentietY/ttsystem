@@ -23,6 +23,7 @@
             break;
         }
         
+        require_once('model/alert.php');
         require_once('model/subjects.php');
         $controller->{ $action }();
     }
