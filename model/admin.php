@@ -30,7 +30,6 @@
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $user);
             oci_bind_by_name($objParse, ':password', $username);
-            oci_bind_by_name($objParse, ':role', 'Student');
             oci_bind_by_name($objParse, ':message', $message, 250);
             oci_bind_by_name($objParse, ':code', $code, 10);
             oci_execute($objParse);
