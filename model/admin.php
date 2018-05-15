@@ -12,11 +12,10 @@
             $lastname = strtolower($lastname);
             $username = $lastname.strtolower($initials)."@tut.ac.za";
             $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
-            $statement = 'call create_user(:username, :password, :role, :message, :code)';    
+            $statement = 'call create_user(:username, :password, Lecturer, :message, :code)';    
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $username);
             oci_bind_by_name($objParse, ':password', $lastname);
-            oci_bind_by_name($objParse, ':role', 'Lecturer');
             oci_bind_by_name($objParse, ':message', $message, 250);
             oci_bind_by_name($objParse, ':code', $code, 10);
             oci_execute($objParse);
@@ -27,7 +26,7 @@
         public static function createStudent($username){
             $user = $username."@tut.ac.za";
             $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
-            $statement = 'call create_user(:username, :password, :role, :message, :code)';
+            $statement = 'call create_user(:username, :password, Student, :message, :code)';
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $user);
             oci_bind_by_name($objParse, ':password', $username);
