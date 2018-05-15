@@ -10,7 +10,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/lecturer.js"></script>
-    <title>Welcome</title>
+    <title>Welcome <?php echo $_SESSION["user"]; ?></title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -20,7 +20,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
+                <li class="nav-item">
                     <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="profile" onclick="profileFill()">Profile
                     </button>
                 </li>

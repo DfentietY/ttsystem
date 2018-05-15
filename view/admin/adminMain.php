@@ -10,29 +10,28 @@
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/admin.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>   
+    <title>Welcome Admin</title>   
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="pull-left" href="#"><img src="img/tut-logo-blue.png"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#ResetModal">Reset Password 
-                        <span class="sr-only">(current)</span>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#ResetModal">Reset Password
                     </button>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#CreateModal">Create User</button>
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#CreateModal">Create User</button>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#RemoveModal">Remove Users</button>
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#RemoveModal">Remove Users</button>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="btnViewModal" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" id="btnViewModal" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="POST">
@@ -65,7 +64,7 @@
                         </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -97,7 +96,7 @@
     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -122,7 +121,7 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -142,7 +141,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
