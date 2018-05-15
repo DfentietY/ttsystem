@@ -8,6 +8,7 @@
                     $message = Admin::createLecturer($lastname, $initials);
                     require_once('view/admin/adminMain.php');
                     Alert::alertMessage($message);
+                }
             }
 
             if (isset($_POST['btnStud'])) {
