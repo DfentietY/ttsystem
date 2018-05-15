@@ -6,6 +6,7 @@ class Alert{
         }
 
         public static function alertMessage($message) {
+            echo '<script> console.log("Alert happens");</script>';
             if($message[1] == 'TT512'){
                 alertError($message[0]);
             }else if($message[1] == 'TT132'){
