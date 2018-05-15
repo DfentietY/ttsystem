@@ -5,7 +5,7 @@ CREATE OR REPLACE PROCEDURE create_user(p_username IN VARCHAR2,
                                         p_code OUT VARCHAR2)
 IS
 BEGIN
-    EXECUTE IMMEDIATE 'CREATE USER "'||p_username||'" IDENTFIED BY '||p_password;
+    EXECUTE IMMEDIATE 'CREATE USER "'||p_username||'" IDENTFIED BY "'||p_password||'"';
     IF p_role = 'Lecturer' THEN
         EXECUTE IMMEDIATE 'GRANT Lecturer TO "'||p_username||'"';
     ELSIF p_role = 'Student' THEN
@@ -13,7 +13,6 @@ BEGIN
     ELSE
         p_message := 'Role unknown';
         p_code := 'TT512';
-        RETURN;
     END IF;
 
     p_message := 'user created successfully';
