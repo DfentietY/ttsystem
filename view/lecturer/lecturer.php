@@ -36,8 +36,8 @@
     </script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <a class="pull-left" href="#"><img src="img/tut-logo-blue.jpg"/></a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="pull-left" href="#"><img src="img/tut-logo-blue.png"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
