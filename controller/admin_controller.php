@@ -12,8 +12,8 @@
             }
 
             if (isset($_POST['btnStud'])) {
-                $studNum = filter_input(INPUT_POST, 'username') ? filter_input(INPUT_POST, 'username') : 0;
-                if($studNum != 0){
+                $studNum = filter_input(INPUT_POST, 'username') ? filter_input(INPUT_POST, 'username') : '%';
+                if($studNum != '%'){
                     $message = Admin::createStudent($studNum);
                     require_once('view/admin/adminMain.php');
                     Alert::alertMessage($message);
@@ -24,7 +24,7 @@
             if(isset($_POST['btnRemove'])){
                 $username = filter_input(INPUT_POST,'username') ? filter_input(INPUT_POST,'username') : '%';
                 if($username != '%'){
-                    $messsage = Admin::removeUser($username);
+                    $message = Admin::removeUser($username);
                     require_once('view/admin/adminMain.php');
                     Alert::alertMessage($message);
                 }
