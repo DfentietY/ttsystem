@@ -23,7 +23,7 @@
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <a class="pull-left" href="#"><img src="img/tut-logo-blue.jpg"/></a>
+        <a class="pull-left" href="#"><img src="img/tut-logo-blue.png"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -44,8 +44,10 @@
                     <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="btnViewModal" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log Out</button>
+            <form class="form-inline my-2 my-lg-0" method="POST">
+                <button class="btn btn-outline-danger my-2 my-sm-0" name="logout" type="submit">Log Out</button>
+                <input type="hidden" name="controller" value="main" />
+                <input type="hidden" name="action" value="logout" />
             </form>
         </div>
     </nav>
