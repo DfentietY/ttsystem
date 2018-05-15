@@ -4,36 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="font/stylesheet.css" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/lecturer.js"></script>
     <title>Welcome</title>
     <style>
         #nav-menu {
             margin-right: 1rem; 
         }
         img{
+            filter: invert(100%);
             width: 150px;
             height: 75px;
         }
-    </style>
-    <script>
-        function AjaxReady() {
-            var form = document.getElementById('form');
-            var xmlhttp;
-            
-            if(window.XMLHttpRequest){ xmlhttp = new XMLHttpRequest(); }
-            else{ xmlhttp = new ActiveXObject("Microsoft.XMLHttp"); }
-            xmlhttp.onreadystatechange = function() {
-                if(this.readyState == 4 && this.status == 200){
-                    form.innerHTML = this.responseText;
-                }
-            }
-
-            return xmlhttp;
+        .navbar-nav > li{
+            padding-left: 1rem;
+            padding-right: 1rem;
         }
-    </script>
+        .center-form {
+            width: 25rem;
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -44,8 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="profile" onclick="profileFill()">Profile 
-                        <span class="sr-only">(current)</span>
+                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="profile" onclick="profileFill()">Profile
                     </button>
                 </li>
                 <li class="nav-item">
@@ -60,19 +52,5 @@
     <div class="container-fluid" id="form">
 
     </div>
-    <script src="js/lecturer.js"></script>
-    <script>
-        function profileFill() {
-            xmlhttp = AjaxReady();
-            xmlhttp.open("GET", "?controller=lecturer&action=maintainProf");
-            xmlhttp.send();
-        }
-
-        function subjectFill() {
-            xmlhttp = AjaxReady();
-            xmlhttp.open("GET", "?controller=lecturer&action=viewSubjects");
-            xmlhttp.send();
-        }
-    </script>
 </body>
 </html>
