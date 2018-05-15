@@ -5,21 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="font/stylesheet.css" />
+    <link rel="stylesheet" href="css/admin.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/admin.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>   
-    <style>
-        #nav-menu {
-            margin-right: 1rem; 
-        }
-        img{
-            filter: invert(100%);
-            width: 150px;
-            height: 75px;
-        }
-    </style>
 </head>
 <body>
 <nav class="navbar navbar-expand-lg navbar-dark bg-black">
