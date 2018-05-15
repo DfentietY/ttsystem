@@ -146,6 +146,9 @@
             </div>
         </div>
     </div>
+    <div class="container-fluid">
+        
+    </div>
     <script>        
         $("#btnViewModal").on("click", function (){
             $("#lectNames").load("?controller=admin&action=viewLecturer");
