@@ -68,7 +68,7 @@
                             </br>
                             <input placeholder="Enter Password" class="form-control" type="password" name="password" />
                             </br>
-                            <p><input class="btn btn-def btn-block" type="submit" name="btnReset" value="Reset" /></p>
+                            <p><input class="btn btn-dark btn-block" type="submit" name="btnReset" value="Reset" /></p>
                             <p><input type="hidden" name="controller" value="admin"></p>
                             <p><input type="hidden" name="action" value="resetPassword"></p>
                         </form>
@@ -125,7 +125,7 @@
                     <form style="text-align: center;" action="" method="POST">
                         <input placeholder="Enter Username" class="form-control" type="text" name="username" />
                         </br>
-                        <p><input class="btn btn-def btn-block" type="submit" name="btnRemove" value="Remove" /></p>
+                        <p><input class="btn btn-dark btn-block" type="submit" name="btnRemove" value="Remove" /></p>
                         <input type="hidden" name="controller" value="admin" />
                         <input type="hidden" name="action" value="removeUser" />
                     </form>
