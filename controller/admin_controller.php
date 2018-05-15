@@ -5,18 +5,18 @@
                 $lastname = filter_input(INPUT_POST, 'lastname') ? filter_input(INPUT_POST, 'lastname') : '%';
                 $initials = filter_input(INPUT_POST, 'initials') ? filter_input(INPUT_POST, 'initials') : '%';
                 if($lastname != '%'){
-                    Admin::createLecturer($lastname, $initials);
+                    $message = Admin::createLecturer($lastname, $initials);
                     require_once('view/admin/adminMain.php');
-                    echo "user created";
+                    Alert::alertMessage($message);
                 }
             }
 
             if (isset($_POST['btnStud'])) {
                 $studNum = filter_input(INPUT_POST, 'username') ? filter_input(INPUT_POST, 'username') : 0;
                 if($studNum != 0){
-                    Admin::createStudent($studNum);
+                    $message = Admin::createStudent($studNum);
                     require_once('view/admin/adminMain.php');
-                    echo "user created";
+                    Alert::alertMessage($message);
                 }
             }
         }
@@ -24,9 +24,9 @@
             if(isset($_POST['btnRemove'])){
                 $username = filter_input(INPUT_POST,'username') ? filter_input(INPUT_POST,'username') : '%';
                 if($username != '%'){
-                    Admin::removeUser($username);
+                    $messsage = Admin::removeUser($username);
                     require_once('view/admin/adminMain.php');
-                    echo "user removed";
+                    Alert::alertMessage($message);
                 }
             }
         }
@@ -35,9 +35,9 @@
                 $username = filter_input(INPUT_POST,'username')?filter_input(INPUT_POST,'username'):'%';
                 $password = filter_input(INPUT_POST,'password')?filter_input(INPUT_POST,'password'):'%';
                 if($username != '%' || $password !='%'){
-                    Admin::resetPassword($username,$password);
+                    $message = Admin::resetPassword($username,$password);
                     require_once('view/admin/adminMain.php');
-                    echo "password reseted";
+                    Alert::alertMessage($message);
                 }
             }
         }
