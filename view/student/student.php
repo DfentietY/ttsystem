@@ -11,7 +11,7 @@
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/ajax.js"></script>
     <script src="js/student.js"></script>
-    <title>Welcome <? echo $_SESSION["user"]; ?></title>
+    <title>Welcome <?php echo $_SESSION["user"]; ?></title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

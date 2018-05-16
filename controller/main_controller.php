@@ -17,7 +17,7 @@
                         require_once("view/lecturer/lecturer.php");
                     } else if(strtolower($user->role) == "student"){
                         //send to student page
-                        echo "Student in the house";
+                        require_once("view/student/student.php");
                     }else {
                         echo "Who is this?";
                     }

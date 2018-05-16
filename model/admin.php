@@ -26,17 +26,20 @@
         }
 
         public static function createStudent($username){
-            $role = 'Student';
+            //$role = 'Student';
             $user = $username."@tut.ac.za";
             $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
-            $statement = 'call create_user(:username, :password, :role, :message, :code)';
+            $statement = "CREATE USER ':username' IDENTIFIED BY ':password';
+                            GRANT Student TO ':username'";
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $user);
             oci_bind_by_name($objParse, ':password', $username);
-            oci_bind_by_name($objParse, ':role', $role);
-            oci_bind_by_name($objParse, ':message', $message, 250);
-            oci_bind_by_name($objParse, ':code', $code, 10);
+            //oci_bind_by_name($objParse, ':role', $role);
+            //oci_bind_by_name($objParse, ':message', $message, 250);
+            //oci_bind_by_name($objParse, ':code', $code, 10);
             oci_execute($objParse);
+            $r = oci_error();
+            $message .= "<br />".$r['message'];
 
             return $message = array($message, $code);
         }
@@ -50,7 +53,7 @@
             oci_bind_by_name($objParse, ':message', $message, 250);
             oci_bind_by_name($objParse, 'code', $code, 10);
             oci_execute($objParse);
-
+            
             return $message = array($message, $code);
         }
 
