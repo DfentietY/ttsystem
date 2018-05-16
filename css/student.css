@@ -6,3 +6,13 @@ img{
     padding-left: 1rem;
     padding-right: 1rem;
 }
+.center-form {
+    opacity: 0.8;
+    color: white;
+    border-radius: 2rem;
+    background-color: #222222;
+    margin: auto;
+    margin-top: 13rem;
+    padding: 2rem 4rem;
+    width: 25rem;
+}
