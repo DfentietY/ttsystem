@@ -11,7 +11,7 @@
         public static function createLecturer($lastname,$initials){
             $lastname = strtolower($lastname);
             $username = $lastname.strtolower($initials)."@tut.ac.za";
-            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
+            $conn = Db::getAdminInstance();
             $statement = 'call create_user(:username, :password, :message, :code)';    
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $username);
@@ -19,7 +19,10 @@
             oci_bind_by_name($objParse, ':message', $message, 250);
             oci_bind_by_name($objParse, ':code', $code, 10);
             oci_execute($objParse);
-
+            $statement = 'GRANT Student TO "'.$user.'"';
+            $objParse = oci_parse($conn, $statement);
+            $r = oci_execute($objParse);
+            self::checkError($r);
             return $message = array($message, $code);
         }
 
@@ -27,21 +30,24 @@
             $user = $username."@tut.ac.za";
             $conn = Db::getAdminInstance();
             ini_set('display_errors', 'ON');
-            $statement = 'CREATE USER "'.$user.'" IDENTIFIED BY '.$username;
+            $statement = 'call create_user(:username, :password, :message, :code)';
             $objParse = oci_parse($conn, $statement);
+            oci_bind_by_name($objParse, ':username', $user);
+            oci_bind_by_name($objParse, ':password', $username);
+            oci_bind_by_name($objParse, ':message', $message, 250);
+            oci_bind_by_name($objParse, ':code', $code, 10);
             $r = oci_execute($objParse);
             self::checkError($r);
             $statement = 'GRANT Student TO "'.$user.'"';
             $objParse = oci_parse($conn, $statement);
             $r = oci_execute($objParse);
             self::checkError($r);
-
             return $message = array($message, $code);
         }
 
         public static function removeUser($username){
             $username = strtolower($username);
-            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
+            $conn = Db::getAdminInstance();
             $statement = 'call drop_user(:username, :message, :code)';
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $username);
@@ -54,7 +60,7 @@
 
         public static function resetPassword($username, $password){
             $username = strtolower($username);
-            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
+            $conn = Db::getAdminInstance();
             $statement = 'call alter_user(:username, :password, :message, :code)';
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $username);
@@ -67,7 +73,7 @@
         }
 
         public static function viewLecturer(){
-            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
+            $conn = Db::getAdminInstance();
             $statement = "SELECT lect_username, lect_lastname||' '||lect_initials AS name
                             FROM tbllecturer";
             $objParse = oci_parse($conn, $statement);
