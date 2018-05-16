@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/admin.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/admin.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Welcome Admin</title>   
@@ -89,7 +90,7 @@
         </br>
     </form>
     <form method="POST">
-        <div class="container" id="csContainer">
+        <div class="container" id="form">
         </div>
         <input type="hidden" name="controller" value="admin" />
         <input type="hidden" name="action" value="createUser" />

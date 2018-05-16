@@ -1,14 +1,8 @@
 function create_user(role) {
-    var container =  document.getElementById("csContainer");
-    if(role == ""){ container.innerHTML = ""; }
+    var form =  document.getElementById("form");
+    if(role == ""){ form.innerHTML = ""; }
     else {
-        if(window.XMLHttpRequest){ xmlhttp = new XMLHttpRequest(); }
-        else { xmlhttp = new ActiveXObject("Microsoft.XMLHTTP"); }
-        xmlhttp.onreadystatechange = function () {
-            if(this.readyState == 4 && this.status == 200){
-                container.innerHTML = this.responseText;
-            }
-        };
+        xmlhttp = AjaxReady();
         xmlhttp.open("GET", "view/admin/getCreateUserUI.php?role=" + role, true);
         xmlhttp.send(null);
     }

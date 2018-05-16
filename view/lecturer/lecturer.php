@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/lecturer.js"></script>
     <title>Welcome <?php echo $_SESSION["user"]; ?></title>
 </head>

@@ -7,9 +7,9 @@ class Alert{
 
         public static function alertMessage($message) {
             if($message[1] == 'TT512'){
-                Alert::alertError($message[0]);
+                self::alertError($message[0]);
             }else if($message[1] == 'TT132'){
-                Alert::alertSuccess($message[0]);
+                self::alertSuccess($message[0]);
             }
         }
         public static function alertError($message){

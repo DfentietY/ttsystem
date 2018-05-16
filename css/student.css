@@ -1,0 +1,8 @@
+img{
+    width: 150px;
+    height: 75px;
+}
+.navbar-nav > li{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
