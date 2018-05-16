@@ -28,7 +28,7 @@
         $controller->{ $action }();
     }
 
-    $controllers = array('main' => array('login'),
+    $controllers = array('main' => array('login', 'logout'),
                         'admin' => array('createUser', 'removeUser', 'resetPassword', 'viewLecturer'),
                         'lecturer' => array('maintainProf', 'viewSubjects'),
                         'student' => array('maintainProf', 'getTimeTable'));

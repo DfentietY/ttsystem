@@ -2,7 +2,7 @@ CREATE OR REPLACE PROCEDURE update_lecturer(p_password IN VARCHAR2,
                                             p_email IN VARCHAR2, 
                                             p_birthday IN VARCHAR2,
                                             p_username IN VARCHAR2, 
-                                            p_message OUT VARCHAR2
+                                            p_message OUT VARCHAR2,
                                             p_code OUT VARCHAR2)
 IS
 BEGIN

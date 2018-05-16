@@ -47,6 +47,7 @@ END;
 @"D:\ttsystem\stored_procedures\alter_user.sql";
 @"D:\ttsystem\stored_procedures\create_user.sql";
 @"D:\ttsystem\stored_procedures\drop_user.sql";
+@"D:\ttsystem\stored_procedures\update_lecture.sql";
 @"D:\ttsystem\stored_procedures\print_timetable.sql";
 
 

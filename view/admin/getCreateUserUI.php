@@ -2,12 +2,12 @@
     $role = filter_input(INPUT_GET, 'role');
     if($role == "lecturer"){
         echo '<div class="container" style="text-align: center;"> 
-                <label  for="uname"><b>lastname</b></label>
-                <input class="form-control" type="text" placeholder="Enter lastname" name="lastname" required />
-                <label  for="pwd"><b>initials</b></label>
-                <input class="form-control" type="text" placeholder="Enter initials" name="initials" required/>
+                <label  for="lastname"><b>Lastname</b></label>
+                <input class="form-control" type="text" placeholder="Enter lastname" id="lastname" name="lastname" required />
+                <label  for="initials"><b>Initials</b></label>
+                <input class="form-control" type="text" placeholder="Enter initials" id="initials" name="initials" required/>
                 </br />
-                <input type="submit" class="btn btn-def btn-block" name="btnLect" value="Register User">
+                <input type="submit" class="btn btn-dark btn-block" name="btnLect" value="Register User">
               </div>';
     }else if($role == "student"){
         echo '<div class="container" style="text-align: center;" >
@@ -15,7 +15,7 @@
                 </br />
                 <input class="form-control" type="text" placeholder="Enter Student Number" name="username" required />
                 </br />
-                <input type="submit" class="btn btn-def btn-block" name="btnStud" value="Register User">
+                <input type="submit" class="btn btn-dark btn-block" name="btnStud" value="Register User">
             </div>';
     }
 ?>

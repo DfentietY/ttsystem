@@ -5,47 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="font/stylesheet.css" />
+    <link rel="stylesheet" href="css/admin.css" />
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <script src="js/admin.js"></script>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>   
-    <style>
-        #nav-menu {
-            margin-right: 1rem; 
-        }
-        img{
-            filter: invert(100%);
-            width: 150px;
-            height: 75px;
-        }
-    </style>
+    <title>Welcome Admin</title>   
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-black">
-        <a class="pull-left" href="#"><img src="img/tut-logo-blue.jpg"/></a>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="pull-left" href="#"><img src="img/tut-logo-blue.png"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#ResetModal">Reset Password 
-                        <span class="sr-only">(current)</span>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#ResetModal">Reset Password
                     </button>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#CreateModal">Create User</button>
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#CreateModal">Create User</button>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" data-toggle="modal" data-target="#RemoveModal">Remove Users</button>
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#RemoveModal">Remove Users</button>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="btnViewModal" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" id="btnViewModal" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Log Out</button>
+            <form class="form-inline my-2 my-lg-0" method="POST">
+                <button class="btn btn-outline-danger my-2 my-sm-0" name="logout" type="submit">Log Out</button>
+                <input type="hidden" name="controller" value="main" />
+                <input type="hidden" name="action" value="logout" />
             </form>
         </div>
     </nav>
@@ -66,13 +58,13 @@
                             </br>
                             <input placeholder="Enter Password" class="form-control" type="password" name="password" />
                             </br>
-                            <p><input class="btn btn-def btn-block" type="submit" name="btnReset" value="Reset" /></p>
+                            <p><input class="btn btn-dark btn-block" type="submit" name="btnReset" value="Reset" /></p>
                             <p><input type="hidden" name="controller" value="admin"></p>
                             <p><input type="hidden" name="action" value="resetPassword"></p>
                         </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -104,7 +96,7 @@
     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -123,13 +115,13 @@
                     <form style="text-align: center;" action="" method="POST">
                         <input placeholder="Enter Username" class="form-control" type="text" name="username" />
                         </br>
-                        <p><input class="btn btn-def btn-block" type="submit" name="btnRemove" value="Remove" /></p>
+                        <p><input class="btn btn-dark btn-block" type="submit" name="btnRemove" value="Remove" /></p>
                         <input type="hidden" name="controller" value="admin" />
                         <input type="hidden" name="action" value="removeUser" />
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
@@ -149,10 +141,13 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
                 </div>
             </div>
         </div>
+    </div>
+    <div class="container-fluid">
+        
     </div>
     <script>        
         $("#btnViewModal").on("click", function (){

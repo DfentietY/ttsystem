@@ -65,7 +65,7 @@
                             <p><h1>Welcome</h1></p>
                             <p><input type="text" class="form-control" placeholder="Enter Username" name="username" required /></p>
                             <p><input type="password" class="form-control" placeholder="Enter Password" name="password" required/></p>
-                            <p><input type="submit" class="btn btn-def btn-block" name="btnLogin" value="Login"></p>
+                            <p><input type="submit" class="btn btn-dark btn-block" name="btnLogin" value="Login"></p>
                             <input type="hidden" name="controller" value="main" />
                             <input type="hidden" name="action" value="login" />
                         </div>

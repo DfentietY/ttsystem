@@ -29,5 +29,14 @@
                 require_once('view/login.php');
             }
         }
+
+        public function logout() {
+            if(isset($_POST["logout"])){
+                unset($_SESSION["user"]);
+                unset($_SESSION["role"]);
+                unset($_SESSION["pass"]);
+                require_once('view/login.php');
+            }
+        }
     }
 ?>

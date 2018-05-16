@@ -1,9 +1,5 @@
-(function() {
-    console.log('ajax works');
-}());
-
 function AjaxReady() {
-    var form = document.getElementById('form');
+    var changePwdForm = document.getElementById('pwdForm');
     var xmlhttp;
     
     if(window.XMLHttpRequest){ xmlhttp = new XMLHttpRequest(); }
@@ -16,14 +12,11 @@ function AjaxReady() {
     return xmlhttp;
 }
 
-function profileFill() {
-    xmlhttp = AjaxReady();
-    xmlhttp.open("GET", "?controller=lecturer&action=maintainProf");
+function maintainProfile()
+{
+    xmlhttp=AjaxReady();
+    xmlhttp.open("GET","?controller=student&action=maintainProf",true);
     xmlhttp.send();
-}
 
-function subjectFill() {
-    xmlhttp = AjaxReady();
-    xmlhttp.open("GET", "?controller=lecturer&action=viewSubjects");
-    xmlhttp.send();
+
 }
