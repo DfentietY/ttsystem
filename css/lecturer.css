@@ -1,5 +1,5 @@
 img{
-    filter: invert(100%);
+    filter: invert(50%);
     width: 150px;
     height: 75px;
 }
