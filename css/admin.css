@@ -8,3 +8,10 @@ img{
     width: 150px;
     height: 75px;
 }
+
+.alert{
+    position: absolute;
+    top: 10rem;
+    left: 45rem;
+    width: 35rem;
+}

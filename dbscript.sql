@@ -8,7 +8,7 @@ CONNECT T_super/T_super
 CREATE ROLE Admin;
 CREATE ROLE Lecturer;
 CREATE ROLE Student;
-GRANT DBA TO Admin;
+GRANT SYSDBA TO Admin;
 GRANT Admin To T_super;
 GRANT CREATE SESSION TO Lecturer;
 GRANT SELECT, UPDATE ON T_super.tbllecturer TO Lecturer;

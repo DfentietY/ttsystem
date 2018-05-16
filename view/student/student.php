@@ -22,11 +22,11 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="profile" onclick="maintainProfile()">Profile
+                    <button class="nav-link btn btn-outline-success my-2 my-sm-0" id="profile" onclick="maintainProfile()">Profile
                     </button>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="subjects" onclick="()">View Subjects</button>
+                    <button class="nav-link btn btn-outline-success my-2 my-sm-0" id="subjects" onclick="()">View Subjects</button>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="POST">

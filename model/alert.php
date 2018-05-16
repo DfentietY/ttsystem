@@ -10,6 +10,8 @@ class Alert{
                 self::alertError($message[0]);
             }else if($message[1] == 'TT132'){
                 self::alertSuccess($message[0]);
+            }else {
+                self::alertError($message[0]);
             }
         }
         public static function alertError($message){

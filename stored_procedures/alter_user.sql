@@ -4,6 +4,7 @@ CREATE OR REPLACE PROCEDURE alter_user(p_username IN VARCHAR2,
                                         p_code OUT VARCHAR2)
 IS 
 BEGIN
+    EXECUTE IMMEDIATE 'GRANT ALTER USER TO T_super';
     EXECUTE IMMEDIATE 'ALTER USER "'||LOWER(p_username)||'" IDENTIFIED BY "'||p_password||'"';
     p_message := 'Password successfully changed';
     p_code := 'TT132';
