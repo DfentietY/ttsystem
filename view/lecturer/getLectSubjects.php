@@ -29,6 +29,10 @@
         echo "  </tbody>
               </table>";
         echo "</div>";
+    }else {
+        echo "<div class='center-form'>
+                <p>Ayeye</p>    
+            </div>";
     }
 
 ?>

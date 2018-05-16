@@ -1,7 +1,7 @@
 <?php 
     class LecturerController {
         public function maintainProf() {
-            LecturerController::getLectInfo($_SESSION["user"]);
+            self::getLectInfo($_SESSION["user"]);
             if(isset($_POST['btnProf'])){
                 $username = $_SESSION["user"];
                 $password = filter_input(INPUT_POST, 'password') ? filter_input(INPUT_POST, 'password') : $_SESSION["pass"];
@@ -16,10 +16,8 @@
         }
 
         public function viewSubjects() {
-            if(isset($_POST['btnView'])){
-                $list = Subjects::getLectSubj();
-                require_once('view/lecturer/getLectSubject.php');
-            }
+            $list = Subjects::getLectSubj();
+            require_once('view/lecturer/getLectSubject.php');
         }
 
         public static function getLectInfo($username) {

@@ -19,7 +19,7 @@
             oci_bind_by_name($objParse, ':message', $message, 250);
             oci_bind_by_name($objParse, ':code', $code, 10);
             oci_execute($objParse);
-            $statement = 'GRANT Student TO "'.$user.'"';
+            $statement = 'GRANT Lecturer TO "'.$username.'"';
             $objParse = oci_parse($conn, $statement);
             $r = oci_execute($objParse);
             self::checkError($r);
