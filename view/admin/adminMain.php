@@ -34,6 +34,12 @@
                 <li class="nav-item">
                     <button class="nav-link btn btn-outline-warning my-2 my-sm-0" id="btnViewModal" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
                 </li>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#ManSubjGrpModal">Maintain Subject Groups</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#MaintainSubjModal">Maintain Subjects</button>
+                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="POST">
                 <button class="btn btn-outline-danger my-2 my-sm-0" name="logout" type="submit">Log Out</button>
@@ -129,7 +135,7 @@
     </div>
 
         <!-- view lectures Modal -->
-        <div id="ViewModal" class="modal fade" role="dialog">
+    <div id="ViewModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
@@ -139,6 +145,44 @@
                 </div>
                 <div class="modal-body">
                     <div id="lectNames">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Maintain Subject Groups -->
+    <div id="ManSubjGrpModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Maintain Subject Groups</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="manSubj">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Maintain subjects -->
+    <div id="MaintainSubjModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Maintain Subjects</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div id="manSubj">
                     </div>
                 </div>
                 <div class="modal-footer">
