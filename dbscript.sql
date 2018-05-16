@@ -1,6 +1,6 @@
 --sqlplus / as sysdba
 CREATE USER T_super IDENTIFIED BY T_super;
-GRANT DBA, RESOURCE TO T_super;
+GRANT SYSDBA, RESOURCE TO T_super;
 GRANT EXECUTE ON SYS.UTL_FILE TO T_super;
 CONNECT T_super/T_super
 /* Run timetable script */
@@ -48,6 +48,7 @@ END;
 @"D:\ttsystem\stored_procedures\create_user.sql";
 @"D:\ttsystem\stored_procedures\drop_user.sql";
 @"D:\ttsystem\stored_procedures\update_lecture.sql";
+@"D:\ttsystem\stored_procedures\insert_lecture.sql";
 @"D:\ttsystem\stored_procedures\print_timetable.sql";
 
 

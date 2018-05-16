@@ -29,7 +29,6 @@
         public static function createStudent($username){
             $user = $username."@tut.ac.za";
             $conn = Db::getAdminInstance();
-            ini_set('display_errors', 'ON');
             $statement = 'call create_user(:username, :password, :message, :code)';
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $user);
