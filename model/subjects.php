@@ -42,5 +42,23 @@
             
             return;
         }
+
+        public static function getLectSubjects($id){
+            $conn = Db::getAdminInstance();
+            $query = "SELECT DISTINCT s.sub_subjcode, sub_subjname
+                      FROM tblsubject s, tblgrouptype gt, tblgroup g, tbllecturer l
+                      WHERE s.sub_subjcode = gt.sub_subjcode
+                      AND gt.gt_id = g.gt_id
+                      AND g.lect_lectid = :lectid";
+            $objParse = oci_parse($conn, $query);
+            oci_bind_by_name($objParse, ':lectid', $id);
+            oci_execute($objParse);
+
+            while($row = oci_fetch_array($objParse)){
+                $list[] = new Subjects($row[0], $row[1], "", "", "", "");
+            }
+            
+            return $list;
+        }
     }
 ?>

@@ -100,6 +100,17 @@
 
         }
 
+        public static function getLecturers(){
+            $conn = Db::getAdminInstance();
+            $query = "SELECT lect_lectid, lect_lastname||' '||lect_initials FROM tbllecturer";
+            $objParse = oci_parse($conn, $query);
+            oci_execute($objParse);
+            while($row = oci_fetch_array($objParse)){
+                $list[] = new Admin($row[0], $row[1]);
+            }
+            return $list;
+        }
+
         public static function checkError($error){
             if(!$error){
                 $r = oci_error($objParse);

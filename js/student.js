@@ -1,6 +1,6 @@
 function maintainProfile()
 {
-    xmlhttp = AjaxReady();
+    xmlhttp = AjaxReady('form');
     xmlhttp.open("GET","?controller=student&action=maintainProf",true);
     xmlhttp.send();
 }

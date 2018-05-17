@@ -41,9 +41,15 @@
                 }
             }
         }
-        public static function viewLecturer(){
+        public function viewLecturer(){
             $list = Admin::viewLecturer();
             require_once('view/admin/getLecturerUsernames.php');
         }
+
+        public function getLecturers(){
+            $list = Admin::getLecturers();
+            require_once('view/admin/getLectureUI.php');
+        }
+
     }
 ?>

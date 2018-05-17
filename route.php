@@ -29,7 +29,7 @@
     }
 
     $controllers = array('main' => array('login', 'logout'),
-                        'admin' => array('createUser', 'removeUser', 'resetPassword', 'viewLecturer'),
+                        'admin' => array('createUser', 'removeUser', 'resetPassword', 'viewLecturer', 'maintainSubjGrps', 'getLecturers'),
                         'lecturer' => array('maintainProf', 'viewSubjects'),
                         'student' => array('maintainProf', 'getTimeTable'));
 

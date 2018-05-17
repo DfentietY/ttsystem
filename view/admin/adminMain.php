@@ -14,7 +14,7 @@
     <title>Welcome Admin</title>   
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="pull-left" href="#"><img src="img/tut-logo-blue.png"/></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -35,7 +35,7 @@
                     <button class="nav-link btn btn-outline-warning my-2 my-sm-0" id="btnViewModal" data-toggle="modal" data-target="#ViewModal">View Lectures</button>
                 </li>
                 <li class="nav-item">
-                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#ManSubjGrpModal">Maintain Subject Groups</button>
+                    <button class="nav-link btn btn-outline-warning my-2 my-sm-0" id="btnManSubjGrps" data-toggle="modal" data-target="#ManSubjGrpModal">Maintain Subject Groups</button>
                 </li>
                 <li class="nav-item">
                     <button class="nav-link btn btn-outline-warning my-2 my-sm-0" data-toggle="modal" data-target="#MaintainSubjModal">Maintain Subjects</button>
@@ -61,14 +61,14 @@
                 </div>
                 <div style="text-align: center;" class="modal-body">
                     <form action="" method="POST">
-                            <input placeholder="Enter Username" class="form-control" type="text" name="username" />
-                            </br>
-                            <input placeholder="Enter Password" class="form-control" type="password" name="password" />
-                            </br>
-                            <p><input class="btn btn-dark btn-block" type="submit" name="btnReset" value="Reset" /></p>
-                            <p><input type="hidden" name="controller" value="admin"></p>
-                            <p><input type="hidden" name="action" value="resetPassword"></p>
-                        </form>
+                        <input placeholder="Enter Username" class="form-control" type="text" name="username" />
+                        </br>
+                        <input placeholder="Enter Password" class="form-control" type="password" name="password" />
+                        </br>
+                        <p><input class="btn btn-dark btn-block" type="submit" name="btnReset" value="Reset" /></p>
+                        <p><input type="hidden" name="controller" value="admin"></p>
+                        <p><input type="hidden" name="action" value="resetPassword"></p>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -78,7 +78,7 @@
     </div>
 
         <!--create user Modal -->
-        <div id="CreateModal" class="modal fade" role="dialog">
+    <div id="CreateModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
@@ -87,20 +87,20 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                <form name="selForm" action="">
-            <select class="form-control" name="role" onchange="create_user(this.value)">
-                <option value="" selected disabled hidden>Select Option</option>
-                <option value="lecturer" >Lecturer</option>
-                <option value="student" >Student</option>
-            </select>
-        </br>
-    </form>
-    <form method="POST">
-        <div class="container" id="form">
-        </div>
-        <input type="hidden" name="controller" value="admin" />
-        <input type="hidden" name="action" value="createUser" />
-    </form>
+                    <form name="selForm" action="">
+                        <select class="form-control" name="role" onchange="create_user(this.value)">
+                            <option value="" selected disabled hidden>Select Option</option>
+                            <option value="lecturer" >Lecturer</option>
+                            <option value="student" >Student</option>
+                        </select>
+                        </br>
+                    </form>
+                    <form method="POST">
+                        <div class="container" id="form">
+                        </div>
+                        <input type="hidden" name="controller" value="admin" />
+                        <input type="hidden" name="action" value="createUser" />
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -110,7 +110,7 @@
     </div>
 
         <!--remove user Modal -->
-        <div id="RemoveModal" class="modal fade" role="dialog">
+    <div id="RemoveModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <!-- Modal content-->
             <div class="modal-content">
@@ -163,8 +163,16 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                    <div id="manSubj">
-                    </div>
+                    <form action="" method="POST">
+                        <div id="lecturers">
+                        </div>
+                        <div id="subjects">
+                        </div>
+                        <div id="manOptions">
+                        </div>
+                        <div id="manSubjGrps">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
@@ -197,6 +205,12 @@
     <script>        
         $("#btnViewModal").on("click", function (){
             $("#lectNames").load("?controller=admin&action=viewLecturer");
+        });
+        $("#btnManSubjGrps").on("click", function (){
+            $("#lecturers").load("?controller=admin&action=getLecturers");
+        });
+        $("#subjcode").on("change", function() {
+            $("#manOptions").load("view/admin/getManSubjUI.php");
         });
     </script>
     <?php 

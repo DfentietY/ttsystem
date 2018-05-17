@@ -1,5 +1,5 @@
-function AjaxReady() {
-    var form = document.getElementById('form');
+function AjaxReady(id) {
+    var form = document.getElementById(id);
     var xmlhttp;
     if(window.XMLHttpRequest){ xmlhttp = new XMLHttpRequest(); }
     else{ xmlhttp = new ActiveXObject("Microsoft.XMLHttp"); }
