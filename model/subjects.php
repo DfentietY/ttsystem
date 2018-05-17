@@ -33,20 +33,5 @@
 
             return $list;
         }
-
-        public static function getSubjectsByCode($code) {
-            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
-            $statement = "SELECT gr_id 
-                          FROM tblgroup g, tblgrouptype gt 
-                          WHERE g.gt_id = gt.gt_id 
-                          AND gt.sub_subjcode = :code";
-            $objParse = oci_parse($conn, $statement);
-            oci_bind_by_name($objParse, ':code', $code);
-            oci_execute($objParse);
-            while($row = oci_fetch_array($objParse)){
-                $list[] = $row[0];
-            }
-            return $list;
-        }
     }
 ?>
