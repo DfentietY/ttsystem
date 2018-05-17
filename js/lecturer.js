@@ -9,3 +9,9 @@ function subjectFill() {
     xmlhttp.open("GET", "?controller=lecturer&action=viewSubjects");
     xmlhttp.send();
 }
+
+function tmetableFill() {
+    xmlhttp = AjaxReady('form');
+    xmlhttp.open("GET", "?controller=lecturer&action=viewTimetable");
+    xmlhttp.send();
+}

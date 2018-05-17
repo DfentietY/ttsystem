@@ -20,6 +20,11 @@
             require_once('view/lecturer/getLectSubjects.php');
         }
 
+        public function viewTimetable() {
+            $list = Lecturer::viewTimetable();
+            require_once('view/lecturer/getTimetable.php');
+        }
+
         public static function getLectInfo($username) {
             $list = Lecturer::getLectInfo($username);
             require_once('view/lecturer/getLectInfo.php');

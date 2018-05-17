@@ -1,6 +1,6 @@
 <?php
     if(isset($list)){
-        echo "<div class='center-form'>";
+        echo "<div class='center-table-form'>";
         echo "<table class='table table-striped table-hover'>
                 <thead>
                     <th>Subject Code</th>

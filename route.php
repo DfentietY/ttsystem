@@ -30,7 +30,7 @@
 
     $controllers = array('main' => array('login', 'logout'),
                         'admin' => array('createUser', 'removeUser', 'resetPassword', 'viewLecturer', 'maintainSubjGrps', 'getLecturers'),
-                        'lecturer' => array('maintainProf', 'viewSubjects'),
+                        'lecturer' => array('maintainProf', 'viewSubjects','viewTimetable'),
                         'student' => array('maintainProf', 'getTimeTable'));
 
     if(array_key_exists($controller, $controllers)) {

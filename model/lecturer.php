@@ -45,6 +45,25 @@
             return $message = array($message, $code);
         }
 
+        public static function viewTimetable(){
+            $conn = Db::getInstance($_SESSION["user"], $_SESSION["pass"]);
+            $statement = "SELECT sb.sub_subjcode,s.sess_day,s.sess_slot,s.ven_venuecode
+                        FROM tblsubject sb,tblgrouptype gp,tblgroup g,tblsession s,tbllecturer l 
+                        WHERE sb.sub_subjcode=gp.sub_subjcode 
+                        AND gp.gt_id=g.gt_id 
+                        AND g.gr_id=s.gr_id
+                        AND g.lect_lectid=l.lect_lectid
+                        AND LOWER(l.lect_username) = '".$_SESSION["user"]."'";
+            $objParse = oci_parse($conn, $statement);
+            oci_execute($statement);
+            while($row = oci_fetch_array($objParse))
+            {
+                $list[] = new Lecturer($row[0],$row[1],$row[2],$row[3], "");
+            }
+            
+
+            return $list;
+        }
         function changePassword($password){
             $conn = Db::getAdminInstance();
             $statement = 'ALTER USER "'.$username.'" IDENTIFIED BY "'.$password.'"';

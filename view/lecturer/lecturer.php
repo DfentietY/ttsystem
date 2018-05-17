@@ -28,6 +28,9 @@
                 <li class="nav-item">
                     <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="subjects" onclick="subjectFill()">View Subjects</button>
                 </li>
+                <li class="nav-item">
+                    <button class="nav-link btn btn-outline-info my-2 my-sm-0" id="subjects" onclick="tmetableFill()">View TimeTable</button>
+                </li>
             </ul>
             <form class="form-inline my-2 my-lg-0" method="POST">
                 <button class="btn btn-outline-danger my-2 my-sm-0" name="logout" type="submit">Log Out</button>
