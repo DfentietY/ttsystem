@@ -23,8 +23,8 @@
             $objParse = oci_parse($conn, $statement);
             $r = oci_execute($objParse);
             self::checkError($r);
-            $statement = "call insert_lecture(:username, :lastname, :initials, :password, :message, :code)";
-            $objParse($conn, $statement);
+            $statement = "call insert_lecturer(:username, :lastname, :initials, :password, :message, :code)";
+            $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $username);
             oci_bind_by_name($objParse, ':lastname', $lastname);
             oci_bind_by_name($objParse, ':initials', $initials);

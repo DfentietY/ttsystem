@@ -140,7 +140,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4  class="modal-title">View Lectures</h4>
+                    <h4  class="modal-title">View Lecturers</h4>
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
