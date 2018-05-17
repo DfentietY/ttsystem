@@ -209,9 +209,6 @@
         $("#btnManSubjGrps").on("click", function (){
             $("#lecturers").load("?controller=admin&action=getLecturers");
         });
-        $("#subjcode").on("change", function() {
-            $("#manOptions").load("view/admin/getManSubjUI.php");
-        });
     </script>
     <?php 
         require_once('route.php');

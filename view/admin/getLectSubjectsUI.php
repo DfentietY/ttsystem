@@ -10,10 +10,12 @@
     oci_bind_by_name($objParse, ':lectid', $id);
     oci_execute($objParse);
     echo '<br />
-        <select name="subjcode" id="subjcode" class="form-control"> 
-            <option selected disabled hidden>Select Subject</option>';
-            while($row = oci_fetch_array($objParse)){
-                echo '<option value="'.$row[0].'">'.$row[1].'</option>';
-            }
-    echo '</select>';
+        <form action="">
+            <select name="subjcode" id="subjcode" class="form-control" onchange="getOptions()"> 
+                <option selected disabled hidden>Select Subject</option>';
+                while($row = oci_fetch_array($objParse)){
+                    echo '<option value="'.$row[0].'">'.$row[1].'</option>';
+                }
+    echo '  </select>
+        </form>';
 ?>
