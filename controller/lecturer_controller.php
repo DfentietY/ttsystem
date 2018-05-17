@@ -17,7 +17,7 @@
 
         public function viewSubjects() {
             $list = Subjects::getLectSubj();
-            require_once('view/lecturer/getLectSubject.php');
+            require_once('view/lecturer/getLectSubjects.php');
         }
 
         public static function getLectInfo($username) {
