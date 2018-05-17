@@ -51,5 +51,12 @@
             require_once('view/admin/getLectureUI.php');
         }
 
+        public function delSubjGroup(){
+            require_once("view/admin/getDelGrpForm");
+            if(isset($_POST['btnDel'])){
+
+            }
+        }
+
     }
 ?>

@@ -9,13 +9,13 @@
         }
 
         public static function createLecturer($lastname,$initials){
-            $lastname = strtolower($lastname);
-            $username = $lastname.strtolower($initials)."@tut.ac.za";
+            $password = strtolower($lastname);
+            $username = $password.strtolower($initials)."@tut.ac.za";
             $conn = Db::getAdminInstance();
             $statement = 'call create_user(:username, :password, :message, :code)';    
             $objParse = oci_parse($conn, $statement);
             oci_bind_by_name($objParse, ':username', $username);
-            oci_bind_by_name($objParse, ':password', $lastname);
+            oci_bind_by_name($objParse, ':password', $password);
             oci_bind_by_name($objParse, ':message', $message, 250);
             oci_bind_by_name($objParse, ':code', $code, 10);
             oci_execute($objParse);
@@ -23,6 +23,17 @@
             $objParse = oci_parse($conn, $statement);
             $r = oci_execute($objParse);
             self::checkError($r);
+            $statement = "call insert_lecturer(:username, :lastname, :initials, :password, :message, :code)";
+            $objParse = oci_parse($conn, $statement);
+            oci_bind_by_name($objParse, ':username', $username);
+            oci_bind_by_name($objParse, ':lastname', $lastname);
+            oci_bind_by_name($objParse, ':initials', $initials);
+            oci_bind_by_name($objParse, ':password', $password);
+            oci_bind_by_name($objParse, ':message', $mssge, 250);
+            oci_bind_by_name($objParse, ':code', $cde, 10);
+            oci_execute($objParse);
+            $message .= "</br >".$mssge;
+            $code = $cde;
             return $message = array($message, $code);
         }
 

@@ -8,16 +8,17 @@ function create_user(role) {
     }
 }
 
-function getSubjGroupUI(option) {
-    var form = document.getElementById("");
+function getSubjGroupUI(option, subjcode) {
+    var form = document.getElementById("manSubjGrps");
     if(option == ""){ form.innerHTML = ""; }
     else {
         xmlhttp = AjaxReady("manSubjGrps");
         if(option == "addSubjGrp"){
-            xmlhttp.open("GET", "view/admin/");
+            xmlhttp.open("GET", "view/admin/getAddSubjGrpUI.php", true);
             xmlhttp.send();
         }else if(option == "delSubjGrp"){
-            xmlhttp.open("GET", "view/admin/");
+            var subjcode = document.getElementById("subjcode").value;
+            xmlhttp.open("GET", "view/admin/getDelGrpForm.php?subjcode="+subjcode, true);
             xmlhttp.send();
         }
     }
@@ -31,4 +32,10 @@ function getLectSubj(lectid) {
         xmlhttp.open("GET", "view/admin/getLectSubjectsUI.php?id=" + lectid, true);
         xmlhttp.send();
     }
+}
+
+function getOptions(){
+    xmlhttp = AjaxReady("manOptions");
+    xmlhttp.open("GET", "view/admin/getManSubjUI.php", true);
+    xmlhttp.send();
 }

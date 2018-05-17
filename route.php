@@ -29,8 +29,13 @@
     }
 
     $controllers = array('main' => array('login', 'logout'),
+<<<<<<< HEAD
                         'admin' => array('createUser', 'removeUser', 'resetPassword', 'viewLecturer', 'maintainSubjGrps', 'getLecturers'),
                         'lecturer' => array('maintainProf', 'viewSubjects','viewTimetable'),
+=======
+                        'admin' => array('createUser', 'removeUser', 'resetPassword', 'viewLecturer', 'maintainSubjGrps', 'getLecturers', 'delSubjGroup'),
+                        'lecturer' => array('maintainProf', 'viewSubjects'),
+>>>>>>> fa11e6a58d7a48320d277194d8f5f2b293414efc
                         'student' => array('maintainProf', 'getTimeTable'));
 
     if(array_key_exists($controller, $controllers)) {
